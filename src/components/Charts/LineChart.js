@@ -13,7 +13,7 @@ const Chart = ({data}) => {
   
   return (
     <ResponsiveContainer width="100%" height={300}>
-      <LineChart data={data}>
+      <LineChart data={data} margin={{left:-40}}>
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis dataKey="date" />
         <YAxis dataKey="count"/>
