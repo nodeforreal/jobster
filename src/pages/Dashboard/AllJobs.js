@@ -4,7 +4,7 @@ import { JobsFilter, Jobs} from "../../components";
 
 const AllJobs = () => {
   return (
-    <Wrapper className="dashboard-child">
+    <Wrapper className="dashboard-form">
       <JobsFilter />
       <Jobs />
     </Wrapper>
