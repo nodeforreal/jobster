@@ -4,8 +4,14 @@ import styled from "styled-components";
 import { Landing, Error, Register } from "./pages";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import {AddJob, AllJobs, Profile, SharedLayout, Stats} from "./pages/Dashboard";
-import {ProtectedRoute} from './pages'
+import {
+  AddJob,
+  AllJobs,
+  Profile,
+  SharedLayout,
+  Stats,
+} from "./pages/Dashboard";
+import { ProtectedRoute } from "./pages";
 
 const App = () => {
   return (
@@ -23,11 +29,18 @@ const App = () => {
           pauseOnHover
         />
         <Routes>
-          <Route path="/" element={<ProtectedRoute><SharedLayout /></ProtectedRoute>}>
-            <Route index={true}  element={<Stats/>}></Route>
-            <Route path='all-jobs' element={<AllJobs />}></Route>
-            <Route path='add-job' element={<AddJob />}></Route>
-            <Route path='profile' element={<Profile />}></Route>
+          <Route
+            path="/"
+            element={
+              <ProtectedRoute>
+                <SharedLayout />
+              </ProtectedRoute>
+            }
+          >
+            <Route index={true} element={<Stats />}></Route>
+            <Route path="all-jobs" element={<AllJobs />}></Route>
+            <Route path="add-job" element={<AddJob />}></Route>
+            <Route path="profile" element={<Profile />}></Route>
           </Route>
           <Route path="/landing" element={<Landing />}></Route>
           <Route path="/register" element={<Register />}></Route>
@@ -38,5 +51,8 @@ const App = () => {
   );
 };
 
-const Wrapper = styled.main``;
+const Wrapper = styled.main`
+  width: 100vw;
+  height: 100vh;
+`;
 export default App;
