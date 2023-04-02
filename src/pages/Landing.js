@@ -59,8 +59,8 @@ const Wrapper = styled.main`
   }
 
   .register-btn {
+    padding-bottom: 8px;
     font-size: 1.3rem;
-
     text-transform: capitalize;
   }
 
